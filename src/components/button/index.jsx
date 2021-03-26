@@ -4,12 +4,10 @@ import { Link } from "react-router-dom";
 const Button = (props) => {
   switch (props.type) {
     case "link":
-      link(props);
-      break;
+      return link(props);
 
     default:
-      btn(props);
-      break;
+      return btn(props);
   }
 };
 
