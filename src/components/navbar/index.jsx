@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import Button from "../button";
 
 const Navbar = (props) => {
   return (
@@ -10,7 +10,9 @@ const Navbar = (props) => {
             <h3>Mobile Shop Application</h3>
           </div>
           <div class="col text-right">
-            <Button variant="primary">Add item</Button>
+            <Button type="link" to="/add">
+              add Item
+            </Button>
           </div>
         </div>
       </div>
