@@ -2,7 +2,6 @@ import React from "react";
 import Feature from "../../components/feature";
 
 const AboutPhone = (props) => {
-  console.log(props.about);
   return (
     <div className="aboutPhone">
       {Object.keys(props.about).length === 0 ? (

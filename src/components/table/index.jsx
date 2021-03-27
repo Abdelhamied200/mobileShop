@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Table = (props) => {
-  console.log("from table", props.body);
   return (
     <div className="table container my-4">
       <table className="table table-striped table-hover">

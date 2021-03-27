@@ -32,7 +32,6 @@ const search = (setData) => {
 
   let data = JSON.parse(localStorage.getItem("data"));
   let res = data.filter((element) => {
-    console.log("val", element.brand.value);
     if (brand === "All") {
       return true;
     }
