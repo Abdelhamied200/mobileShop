@@ -9,12 +9,12 @@ const Home = (props) => {
       <div className="home">
         <div className="container">
           <div className="row">
-            <div className="col-8">
+            <div className="col-lg-8 col-md-12">
               <Navbar />
               <SearchForm />
               <Table heads={["brand", "model", "year"]}></Table>
             </div>
-            <div className="col-4">hello</div>
+            <div className="col-lg-4 col-md-12">hello</div>
           </div>
         </div>
       </div>
