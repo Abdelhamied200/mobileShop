@@ -95,8 +95,6 @@ const dountSetup = (data, s2) => {
     tooltip.style("visibility", "hidden");
     tooltip.style("opacity", "0");
   });
-
-  console.log(colors);
 };
 
 const randColor = () => "#" + Math.floor(Math.random() * 16777215).toString(16);
