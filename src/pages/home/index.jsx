@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar";
 import Table from "../../components/table";
 import AboutPhone from "../../containers/aboutPhone";
+import Chart from "../../containers/chart";
 import SearchForm from "../../containers/searchForm";
 
 const Home = (props) => {
@@ -19,7 +20,7 @@ const Home = (props) => {
           <div className="row">
             <div className="col-lg-8 col-md-12">
               <Navbar />
-              <SearchForm />
+              <SearchForm setData={setData} />
               <Table
                 setCurrent={setCurrent}
                 heads={["brand", "model", "year"]}
@@ -27,7 +28,7 @@ const Home = (props) => {
               ></Table>
               <AboutPhone about={current}></AboutPhone>
             </div>
-            <div className="col-lg-4 col-md-12">hello</div>
+            <div className="col-lg-4 col-md-12">d3js</div>
           </div>
         </div>
       </div>

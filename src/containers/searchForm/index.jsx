@@ -13,17 +13,38 @@ const SearchForm = (props) => {
               <Field
                 type="dropdown"
                 label="brand"
-                list={["samsung", "sony", "apple", "nokia", "lg"]}
+                list={["All", "samsung", "sony", "apple", "nokia", "lg"]}
               ></Field>
             </div>
             <div className="col-2">
-              <Button>search</Button>
+              <Button click={() => search(props.setData)}>search</Button>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
+};
+
+const search = (setData) => {
+  let model = document.querySelector("input[name='model']").value;
+  let brand = document.querySelector("button[name='brand']").innerText;
+
+  let data = JSON.parse(localStorage.getItem("data"));
+  let res = data.filter((element) => {
+    console.log("val", element.brand.value);
+    if (brand === "All") {
+      return true;
+    }
+    if (
+      element.model.value.includes(model) &&
+      element.brand.value.includes(brand)
+    ) {
+      return true;
+    }
+  });
+
+  setData(res);
 };
 
 export default SearchForm;

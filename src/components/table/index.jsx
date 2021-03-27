@@ -26,11 +26,15 @@ const Table = (props) => {
         </tbody>
       </table>
       {props.body ? (
-        ""
+        props.body.length !== 0 ? (
+          ""
+        ) : (
+          <div class="alert alert-primary w-50 m-auto text-center" role="alert">
+            no phones added yet <Link to="/add">add</Link>
+          </div>
+        )
       ) : (
-        <div class="alert alert-primary w-50 m-auto text-center" role="alert">
-          no phones added yet <Link to="/add">add</Link>
-        </div>
+        ""
       )}
     </div>
   );
