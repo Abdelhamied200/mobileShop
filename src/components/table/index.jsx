@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Table = (props) => {
+  console.log("from table", props.body);
   return (
     <div className="table container my-4">
       <table className="table table-striped table-hover">
@@ -14,10 +15,13 @@ const Table = (props) => {
         </thead>
         <tbody>
           {props.body
-            ? props.body.map((row) => {
-                let tds = row.map((t) => <td>{t}</td>);
-                return <tr>{tds}</tr>;
-              })
+            ? props.body.map((row) => (
+                <tr>
+                  <td>{row.brand.value}</td>
+                  <td>{row.model.value}</td>
+                  <td>{row.year.value}</td>
+                </tr>
+              ))
             : ""}
         </tbody>
       </table>

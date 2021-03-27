@@ -25,6 +25,7 @@ const input = (props) => (
           <input
             type="text"
             className="form-control"
+            name={props.label}
             placeholder={props.placeholder}
           />
         </div>
@@ -46,6 +47,7 @@ const dropdown = (props) => (
               className="btn btn-outline-secondary dropdown-toggle w-100"
               type="button"
               id="main"
+              name={props.label}
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
@@ -73,7 +75,12 @@ const dropdown = (props) => (
 const checkbox = (props) => (
   <div className="field">
     <div className="form-check">
-      <input className="form-check-input" type="checkbox" value="" />
+      <input
+        className="form-check-input"
+        name={props.label}
+        type="checkbox"
+        value=""
+      />
       <label className="form-check-label">{props.label}</label>
     </div>
   </div>
@@ -92,7 +99,7 @@ const radioList = (props) => (
                 <input
                   class="form-check-input"
                   type="radio"
-                  name="flexRadioDefault"
+                  name={props.label}
                 />
                 <label class="form-check-label">{item}</label>
               </div>
@@ -122,7 +129,6 @@ const open = (e) => {
     menu.style.display = "block";
   } else {
     menu.style.display = "none";
-    console.log("heer");
   }
 };
 
