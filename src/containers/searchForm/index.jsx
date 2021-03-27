@@ -33,13 +33,16 @@ const search = (setData) => {
   let data = JSON.parse(localStorage.getItem("data"));
   let res = data.filter((element) => {
     if (brand === "All") {
-      return true;
-    }
-    if (
-      element.model.value.includes(model) &&
-      element.brand.value.includes(brand)
-    ) {
-      return true;
+      if (element.model.value.includes(model)) {
+        return true;
+      }
+    } else {
+      if (
+        element.model.value.includes(model) &&
+        element.brand.value.includes(brand)
+      ) {
+        return true;
+      }
     }
   });
 
