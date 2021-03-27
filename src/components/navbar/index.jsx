@@ -11,7 +11,15 @@ const Navbar = (props) => {
           </div>
           <div className="col text-right">
             <Button type="link" to="/add">
-              add Item
+              Add Item
+            </Button>
+            <Button
+              click={() => {
+                localStorage.clear();
+                props.setData(null);
+              }}
+            >
+              Remove All
             </Button>
           </div>
         </div>

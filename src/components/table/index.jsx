@@ -28,22 +28,30 @@ const Table = (props) => {
             : null}
         </tbody>
       </table>
-      {props.body ? (
-        props.body.length !== 0 ? (
-          ""
-        ) : (
-          <div
-            className="alert alert-primary w-50 m-auto text-center"
-            role="alert"
-          >
-            no phones added yet <Link to="/add">add</Link>
-          </div>
-        )
-      ) : (
-        ""
-      )}
+      {noPhones(props.body)}
     </div>
   );
+};
+
+const noPhones = (data) => {
+  if (!data) {
+    return (
+      <div className="alert alert-danger w-50 m-auto text-center" role="alert">
+        no phones added yet <Link to="/add">add</Link>
+      </div>
+    );
+  } else {
+    if (data.length === 0) {
+      return (
+        <div
+          className="alert alert-danger w-50 m-auto text-center"
+          role="alert"
+        >
+          no phones added yet <Link to="/add">add</Link>
+        </div>
+      );
+    }
+  }
 };
 
 export default Table;

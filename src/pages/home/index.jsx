@@ -19,7 +19,7 @@ const Home = (props) => {
         <div className="container">
           <div className="row">
             <div className="col-lg-8 col-md-12">
-              <Navbar />
+              <Navbar setData={setData} />
               <SearchForm setData={setData} />
               <Table
                 setCurrent={setCurrent}
