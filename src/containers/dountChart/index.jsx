@@ -7,7 +7,7 @@ const DountChart = (props) => {
   useEffect(() => {
     let json = JSON.parse(localStorage.getItem("data"));
     json = data2CountVSBrand(json);
-    dountSetup(json, "#dount-chart");
+    dountSetup(json);
   }, []);
   return (
     <div className="chart dount">
@@ -39,7 +39,7 @@ const data2CountVSBrand = (data) => {
   return res;
 };
 
-const dountSetup = (data, s2) => {
+const dountSetup = (data) => {
   let colors = [];
   for (let i = 0; i < data.length; i++) {
     colors.push(randColor());

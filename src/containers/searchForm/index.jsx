@@ -44,6 +44,7 @@ const search = (setData) => {
         return true;
       }
     }
+    return false;
   });
 
   setData(res);
