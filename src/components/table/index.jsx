@@ -16,7 +16,7 @@ const Table = (props) => {
         <tbody>
           {props.body
             ? props.body.map((row) => (
-                <tr>
+                <tr onClick={() => props.setCurrent(row)}>
                   <td>{row.brand.value}</td>
                   <td>{row.model.value}</td>
                   <td>{row.year.value}</td>
