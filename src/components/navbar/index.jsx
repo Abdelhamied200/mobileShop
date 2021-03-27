@@ -7,7 +7,7 @@ const Navbar = (props) => {
       <div className="container">
         <div className="row w-100">
           <div className="col logo">
-            <h3>Mobile Shop Application</h3>
+            <h3>Mobile Shop</h3>
           </div>
           <div className="col text-right">
             <Button type="link" to="/add">
