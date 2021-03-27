@@ -71,10 +71,6 @@ const dountSetup = (data, s2) => {
     .select(".dount")
     .append("div")
     .attr("class", "tooltip text-center");
-  const toolTipDom = document.querySelector(".tooltip");
-  const x = width / 2 - toolTipDom.offsetWidth / 2;
-  const y = height / 2 + toolTipDom.offsetHeight / 2;
-  tooltip.style("transform", `translate(${x}px, -${y}px)`);
 
   tooltip.append("div").attr("class", "brand");
   tooltip.append("div").attr("class", "percent");
@@ -88,10 +84,9 @@ const dountSetup = (data, s2) => {
     .attr("fill", (d) => color(d.data.brand));
 
   path.on("mouseover", (e, d) => {
-    console.log(d);
     let total = d3.sum(data.map((d) => d.count));
     let percent = Math.round((1000 * d.data.count) / total) / 10;
-    tooltip.select(".brand").html(d.data.brand);
+    tooltip.select(".brand").html(d.data.brand + " ( " + d.data.count + " )");
     tooltip.select(".percent").html(percent + "%");
     tooltip.style("visibility", "visible");
     tooltip.style("opacity", "1");

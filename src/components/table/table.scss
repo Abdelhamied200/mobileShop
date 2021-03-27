@@ -1,0 +1,10 @@
+.table {
+  tbody {
+    tr {
+      cursor: pointer;
+      &:hover {
+        background-color: #d1ecf1;
+      }
+    }
+  }
+}

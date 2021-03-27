@@ -1,26 +1,15 @@
 .chart {
   margin: 30px;
   position: relative;
-  .bar {
-    fill: #28c587;
-  }
-  /* Lighten the axis lines */
-  #x-axis path,
-  #y-axis line,
-  #y-axis path {
-    stroke: #666;
-  }
-  /* Remove the tick marks on the x-axis */
-  #x-axis .tick line {
-    visibility: hidden;
-  }
-
-  text {
-    fill: #666;
-    font-size: 12px;
-  }
-
-  #x-axis text {
-    font-weight: 600;
+  .tooltip {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .brand {
+    }
+    .percent {
+      font-size: 36px;
+      font-weight: 900;
+    }
   }
 }

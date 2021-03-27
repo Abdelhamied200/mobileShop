@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import "./table.scss";
+
 const Table = (props) => {
   return (
     <div className="table container my-4">
