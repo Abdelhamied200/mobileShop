@@ -7,11 +7,11 @@ const Add = (props) => {
     <div className="page">
       <div className="add">
         <div className="container my-4">
-          <div className="row logo">
+          <div className="row my-4 logo">
             <h3>Add Mobile</h3>
           </div>
-          <div className="row">
-            <div className="col">
+          <div className="row my-4">
+            <div className="col-lg-8 col-md-12">
               <Field label="Model" placeholder="Samsung S6" />
               <Field label="Manufacture year" placeholder="2015" />
               <Field
@@ -25,7 +25,7 @@ const Add = (props) => {
                 list={["16GB", "32GB", "64GB", "128GB"]}
               />
             </div>
-            <div className="col">
+            <div className="col-lg-4 col-md-12">
               <div className="row">
                 <div className="col">
                   <Field type="checkbox" label="Dual SIM"></Field>
@@ -49,7 +49,7 @@ const Add = (props) => {
               </div>
             </div>
           </div>
-          <div className="row">
+          <div className="row my-4">
             <Button>Save</Button>
             <Button type="link" to="/">
               back
