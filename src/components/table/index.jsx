@@ -19,7 +19,18 @@ const Table = (props) => {
         <tbody>
           {props.body
             ? props.body.map((row, i) => (
-                <tr key={i} onClick={() => props.setCurrent(row)}>
+                <tr
+                  key={i}
+                  onClick={(e) => {
+                    props.setCurrent(row);
+                    let tr = e.target.parentElement;
+                    let trs = Array.from(document.querySelectorAll("tbody tr"));
+                    trs.forEach((t) => {
+                      t.removeAttribute("style");
+                    });
+                    tr.style.backgroundColor = "#d1ecf1";
+                  }}
+                >
                   <td>{row.brand.value}</td>
                   <td>{row.model.value}</td>
                   <td>{row.year.value}</td>
