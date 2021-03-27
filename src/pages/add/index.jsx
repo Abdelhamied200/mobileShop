@@ -57,8 +57,8 @@ const Add = (props) => {
             </Button>
           </div>
           <div className="row my-4" id="errors">
-            {errors.map((error) => (
-              <div class="alert alert-danger" role="alert">
+            {errors.map((error, i) => (
+              <div key={i} className="alert alert-danger" role="alert">
                 {error}
               </div>
             ))}

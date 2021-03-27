@@ -56,11 +56,12 @@ const dropdown = (props) => (
               {props.list[0]}
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
-              {props.list.map((item) => (
+              {props.list.map((item, i) => (
                 <button
                   onClick={select}
                   className="dropdown-item"
                   type="button"
+                  key={i}
                 >
                   {item}
                 </button>
@@ -95,13 +96,14 @@ const radioList = (props) => (
           </div>
           <div className="col">
             {props.list.map((item, i) => (
-              <div class="form-check">
+              <div className="form-check">
                 <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="radio"
                   name={props.label}
+                  key={i}
                 />
-                <label class="form-check-label">{item}</label>
+                <label className="form-check-label">{item}</label>
               </div>
             ))}
           </div>
