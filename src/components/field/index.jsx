@@ -37,9 +37,9 @@ const dropdown = (props) => (
           <label>{props.label}</label>
         </div>
         <div className="col">
-          <div class={"dropdown " + props.className}>
+          <div className={"dropdown " + props.className}>
             <button
-              class="btn btn-primary dropdown-toggle"
+              className="btn btn-primary dropdown-toggle"
               type="button"
               id="main"
               data-toggle="dropdown"
@@ -49,9 +49,13 @@ const dropdown = (props) => (
             >
               {props.list[0]}
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
               {props.list.map((item) => (
-                <button onClick={select} class="dropdown-item" type="button">
+                <button
+                  onClick={select}
+                  className="dropdown-item"
+                  type="button"
+                >
                   {item}
                 </button>
               ))}
