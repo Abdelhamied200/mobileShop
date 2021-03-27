@@ -48,7 +48,7 @@ const noPhones = (data) => {
   if (!data) {
     return (
       <div className="alert alert-danger w-50 m-auto text-center" role="alert">
-        no phones added yet <Link to="/add">add</Link>
+        no phones selected <Link to="/add">add</Link>
       </div>
     );
   } else {
@@ -58,7 +58,7 @@ const noPhones = (data) => {
           className="alert alert-danger w-50 m-auto text-center"
           role="alert"
         >
-          no phones added yet <Link to="/add">add</Link>
+          no phones selected <Link to="/add">add</Link>
         </div>
       );
     }
