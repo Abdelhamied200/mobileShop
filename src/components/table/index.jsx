@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Table = (props) => {
   return (
-    <div className="table container">
+    <div className="table container my-4">
       <table className="table table-striped table-hover">
         <thead>
           <tr>

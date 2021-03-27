@@ -3,7 +3,7 @@ import Button from "../button";
 
 const Navbar = (props) => {
   return (
-    <div className="navbar">
+    <div className="navbar my-4">
       <div className="container">
         <div className="row w-100">
           <div className="col logo">

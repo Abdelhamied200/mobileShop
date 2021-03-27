@@ -4,11 +4,11 @@ import Field from "../../components/field";
 
 const SearchForm = (props) => {
   return (
-    <div className="search-form">
+    <div className="search-form my-4">
       <div className="form">
         <div className="container">
-          <div className="row">
-            <div className="col">
+          <div className="row align-items-center">
+            <div className="col-10">
               <Field label="model" placeholder="Samsung S6"></Field>
               <Field
                 type="dropdown"
@@ -16,7 +16,7 @@ const SearchForm = (props) => {
                 list={["samsung", "sony", "apple", "nokia", "lg"]}
               ></Field>
             </div>
-            <div className="col">
+            <div className="col-2">
               <Button>search</Button>
             </div>
           </div>

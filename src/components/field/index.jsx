@@ -13,11 +13,11 @@ const Field = (props) => {
 const input = (props) => (
   <div className="field">
     <div className="container">
-      <div className="form-group row w-60">
-        <div className="col">
+      <div className="form-group row align-items-center">
+        <div className="col-2">
           <label>{props.label}</label>
         </div>
-        <div className="col">
+        <div className="col-10">
           <input
             type="text"
             className="form-control"
@@ -32,14 +32,14 @@ const input = (props) => (
 const dropdown = (props) => (
   <div className="field">
     <div className="container">
-      <div className="form-group row w-60">
-        <div className="col">
+      <div className="form-group row align-items-center">
+        <div className="col-2">
           <label>{props.label}</label>
         </div>
-        <div className="col">
+        <div className="col-10">
           <div className={"dropdown " + props.className}>
             <button
-              className="btn btn-primary dropdown-toggle"
+              className="btn btn-outline-secondary dropdown-toggle w-100"
               type="button"
               id="main"
               data-toggle="dropdown"
