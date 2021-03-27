@@ -2,8 +2,6 @@ import React from "react";
 import Button from "../../components/button";
 import Field from "../../components/field";
 
-import "./searchform.scss";
-
 const SearchForm = (props) => {
   return (
     <div className="search-form">
