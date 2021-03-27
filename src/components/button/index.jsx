@@ -12,13 +12,13 @@ const Button = (props) => {
 };
 
 const btn = (props) => (
-  <button onClick={props.click} type="button" className="btn btn-primary">
+  <button onClick={props.click} type="button" className="btn btn-primary m-3">
     {props.children}
   </button>
 );
 
 const link = (props) => (
-  <Link to={props.to}>
+  <Link className="m-3" to={props.to}>
     <button type="button" className="btn btn-primary">
       {props.children}
     </button>

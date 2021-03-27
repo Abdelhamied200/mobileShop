@@ -4,6 +4,10 @@ const Field = (props) => {
   switch (props.type) {
     case "dropdown":
       return dropdown(props);
+    case "checkbox":
+      return checkbox(props);
+    case "radio":
+      return radioList(props);
 
     default:
       return input(props);
@@ -66,6 +70,39 @@ const dropdown = (props) => (
     </div>
   </div>
 );
+const checkbox = (props) => (
+  <div className="field">
+    <div className="form-check">
+      <input className="form-check-input" type="checkbox" value="" />
+      <label className="form-check-label">{props.label}</label>
+    </div>
+  </div>
+);
+const radioList = (props) => (
+  <div className="field">
+    <div className="container">
+      <div className="form-group row">
+        <form>
+          <div className="col">
+            <label>{props.label}</label>
+          </div>
+          <div className="col">
+            {props.list.map((item, i) => (
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                />
+                <label class="form-check-label">{item}</label>
+              </div>
+            ))}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+);
 
 const select = (e) => {
   let dropdown = e.target.parentElement.parentElement;
@@ -76,8 +113,12 @@ const select = (e) => {
   menu.style.display = "none";
 };
 const open = (e) => {
+  let menus = Array.from(document.querySelectorAll(".dropdown-menu"));
   let menu = e.target.parentElement.querySelector(".dropdown-menu");
   if (menu.style.display === "none" || menu.style.display === "") {
+    menus.forEach((menu) => {
+      menu.style.display = "none";
+    });
     menu.style.display = "block";
   } else {
     menu.style.display = "none";
