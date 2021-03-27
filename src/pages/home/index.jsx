@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar";
 import Table from "../../components/table";
 import AboutPhone from "../../containers/aboutPhone";
-import Chart from "../../containers/chart";
+import BarChart from "../../containers/barChart";
+import DountChart from "../../containers/dountChart";
 import SearchForm from "../../containers/searchForm";
 
 const Home = (props) => {
@@ -10,7 +11,6 @@ const Home = (props) => {
   const [current, setCurrent] = useState({});
   useEffect(() => {
     let d = JSON.parse(localStorage.getItem("data"));
-    console.log(d);
     setData(d);
   }, []);
   return (
@@ -28,7 +28,14 @@ const Home = (props) => {
               ></Table>
               <AboutPhone about={current}></AboutPhone>
             </div>
-            <div className="col-lg-4 col-md-12">d3js</div>
+            <div className="col-lg-4 col-md-12">
+              <div className="row">
+                <BarChart />
+              </div>
+              <div className="row">
+                <DountChart></DountChart>
+              </div>
+            </div>
           </div>
         </div>
       </div>
