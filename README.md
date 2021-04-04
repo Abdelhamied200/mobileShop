@@ -27,7 +27,7 @@ start the application
 
 `npm start`
 
-or just view a live copy [here](https://mobileshop.netlify.app/)
+or just view a live copy [here](https://mobileshopy.netlify.app/)
 
 ## Building
 
